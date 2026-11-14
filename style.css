@@ -30,10 +30,10 @@ summary::after{content:" ▾";font-size:.7em}
 .drop a{padding:9px 12px;border-top:1px solid var(--rule)}
 .drop a:first-child{border-top:0}
 @media (max-width:640px){
-  nav{gap:14px}
-  .drop{position:static;border:0;flex-direction:row;gap:12px;margin-top:6px;min-width:0}
-  .drop a{padding:0;border:0}
-  details[open]{flex-basis:100%}
+  .bar{gap:14px;padding-block:18px}
+  .brand{flex-basis:100%}
+  nav{flex-basis:100%;flex-wrap:nowrap;justify-content:space-between;gap:10px;font-size:.7rem;letter-spacing:0;white-space:nowrap}
+  .drop{left:-10px;min-width:140px}
 }
 :focus-visible{outline:2px solid var(--meta);outline-offset:3px}
 
