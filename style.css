@@ -1,7 +1,7 @@
 /* Layout: research-catalogue on cream paper. Serif reading text, DM Mono labels, one colour field per work. Deliberately single-theme (light paper), colours set explicitly. */
 :root{
   --paper:#f5f0e8; --ink:#141414; --soft:#5e5a52; --rule:#d8d1c4; --ph:#a9a39a;
-  --pleaser:#a347d6; --meta:#2f7d3b; --comedy:#e2553a; --ts:#0a1a0f; --gold:#d4a843;
+  --pleaser:#d23a32; --meta:#2f7d3b; --comedy:#7b5cd6; --ts:#0a1a0f; --gold:#d4a843;
   --serif:"Newsreader", "Iowan Old Style", Georgia, serif;
   --mono:"DM Mono", ui-monospace, Menlo, Consolas, monospace;
   color-scheme:light;
