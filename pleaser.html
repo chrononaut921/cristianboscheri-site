@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://cristianboscheri.com/pleaser">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/style.css?v=5">
+<link rel="stylesheet" href="/style.css?v=6">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -23,10 +23,10 @@
   <div class="wrap bar">
     <a class="brand" href="/">Cristian Boscheri</a>
     <nav aria-label="Main">
-      <details id="showsMenu"><summary>Shows</summary><div class="drop"><a href="/pleaser" aria-current="page">Pleaser</a><a href="/heavy-meta">Heavy Meta</a></div></details>
+      <details class="menu" id="showsMenu"><summary class="cur">Shows</summary><div class="drop"><a href="/pleaser" aria-current="page">Pleaser</a><a href="/heavy-meta">Heavy Meta</a><a href="/earlier-shows">Earlier shows</a></div></details>
       <a href="/comedy">Comedy</a>
       <a href="https://timescaping.nl" target="_blank" rel="noopener">Timescaping ↗</a>
-      <a href="/about">About</a>
+      <details class="menu" id="aboutMenu"><summary>About</summary><div class="drop"><a href="/about">About</a><a href="/workshops-hosting">Workshops &amp; hosting</a><a href="/index-of-work">Index</a></div></details>
       <a href="https://linktr.ee/Crinspires" target="_blank" rel="noopener">Agenda ↗</a>
     </nav>
   </div>
@@ -113,6 +113,6 @@
   </div>
   <p class="wrap note">© Cristian Boscheri</p>
 </footer>
-<script>(function(){var m=document.getElementById('showsMenu');if(!m)return;document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.open=false;});})();</script>
+<script>(function(){var ms=document.querySelectorAll("details.menu");ms.forEach(function(m){m.addEventListener("toggle",function(){if(m.open)ms.forEach(function(o){if(o!==m)o.open=false;});});});document.addEventListener("click",function(e){ms.forEach(function(m){if(m.open&&!m.contains(e.target))m.open=false;});});})();</script>
 </body>
 </html>
