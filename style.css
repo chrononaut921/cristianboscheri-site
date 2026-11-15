@@ -188,3 +188,5 @@ summary.cur{text-decoration:underline;text-underline-offset:4px}
 .side-img{width:100%;height:auto;display:block}
 .row .t sup{font-family:var(--mono);font-size:.6rem;margin-left:4px;color:var(--soft)}
 .ix-more .lk{font-family:var(--mono);font-size:.74rem}
+/* v8 */
+#aboutMenu .drop{min-width:150px}
