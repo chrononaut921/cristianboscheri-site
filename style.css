@@ -193,9 +193,17 @@ summary.cur{text-decoration:underline;text-underline-offset:4px}
 .tl .ix-more ul.sub{display:block;list-style:none;margin:0;padding:0;border:0;font-size:.92rem;line-height:1.6;max-width:none}
 .tl .ix-more ul.sub li{display:block;border:0;padding:2px 0;margin:0}
 .ix-more ul.sub b{font-weight:500}
-/* duration bar: 2005 to 2026 */
-.row{grid-template-columns:14px minmax(0,1fr) minmax(0,auto) 66px}
-.rng{display:block;height:3px;background:var(--rule);position:relative;align-self:center}
-.rng.none{background:transparent}
-.rng::after{content:"";position:absolute;top:0;bottom:0;left:calc(var(--a,0) * 100%);width:calc(var(--b,0) * 100%);background:var(--d)}
-@media (max-width:640px){.row{grid-template-columns:14px minmax(0,1fr)}.rng{display:none}}
+/* year strip follows you and lights up the years of the hovered or opened row */
+.strip{position:sticky;z-index:4;background:var(--paper);height:72px;padding-top:10px}
+.strip.hl .yb::before{opacity:.18}
+.strip.hl .yb.lit::before{opacity:1;background:var(--lit);min-height:6px}
+.strip.hl .yb.lit span{color:var(--ink)}
+@media (max-width:640px){.strip{height:58px}}
+.strip .yb::before{height:calc(var(--h) * 34px + 2px)}
+.also{font-family:var(--mono);font-size:.7rem;line-height:1.9;color:var(--soft);margin-top:12px}
+.also span{text-transform:uppercase;letter-spacing:.08em;margin-right:8px}
+.also a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--d)}
+.also a:hover{background:var(--d);color:var(--paper)}
+.also a.dim{opacity:.3}
+.tl .yr{scroll-margin-top:150px}
+.it{scroll-margin-top:170px}
