@@ -207,3 +207,5 @@ summary.cur{text-decoration:underline;text-underline-offset:4px}
 .also a.dim{opacity:.3}
 .tl .yr{scroll-margin-top:150px}
 .it{scroll-margin-top:170px}
+dd.press{display:flex;flex-direction:column;gap:6px}
+dd.press a{text-underline-offset:3px}
