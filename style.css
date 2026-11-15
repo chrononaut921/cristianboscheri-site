@@ -193,3 +193,9 @@ summary.cur{text-decoration:underline;text-underline-offset:4px}
 .tl .ix-more ul.sub{display:block;list-style:none;margin:0;padding:0;border:0;font-size:.92rem;line-height:1.6;max-width:none}
 .tl .ix-more ul.sub li{display:block;border:0;padding:2px 0;margin:0}
 .ix-more ul.sub b{font-weight:500}
+/* duration bar: 2005 to 2026 */
+.row{grid-template-columns:14px minmax(0,1fr) minmax(0,auto) 66px}
+.rng{display:block;height:3px;background:var(--rule);position:relative;align-self:center}
+.rng.none{background:transparent}
+.rng::after{content:"";position:absolute;top:0;bottom:0;left:calc(var(--a,0) * 100%);width:calc(var(--b,0) * 100%);background:var(--d)}
+@media (max-width:640px){.row{grid-template-columns:14px minmax(0,1fr)}.rng{display:none}}
